@@ -95,8 +95,8 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12 relative">
-          <h1 className="text-4xl font-bold text-purple-800 mb-4">Twibbon Creator</h1>
-          <p className="text-gray-600">Add beautiful frames to your profile picture for causes you support</p>
+          <h1 className="text-4xl font-bold text-green-800 mb-4">"Celebrating 175 Years of Fide et Labore"</h1>
+          <p className="text-gray-600">Add frames to your profile picture for the celebration</p>
           <button
             onClick={() => setIsAdminOpen(!isAdminOpen)}
             className="absolute right-4 top-0 p-2 text-gray-600 hover:text-purple-600 transition-colors"
