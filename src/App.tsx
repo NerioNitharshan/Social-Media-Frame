@@ -7,9 +7,7 @@ function App() {
   const [isAdminOpen, setIsAdminOpen] = useState(false);
   const [newFrameName, setNewFrameName] = useState('');
   const [frames, setFrames] = useState({
-    frame1: 'https://res.cloudinary.com/dre0vyh15/image/upload/v1737353892/vecteezy_social-media-beautiful-frame-design-with-red-love-and-blue_13473778_g8qerj.png',
-    frame2: 'https://res.cloudinary.com/dre0vyh15/image/upload/v1737353892/vecteezy_social-media-beautiful-frame-design-with-red-love-and-blue_13473778_g8qerj.png',
-    frame3: 'https://res.cloudinary.com/dre0vyh15/image/upload/v1737353892/vecteezy_social-media-beautiful-frame-design-with-red-love-and-blue_13473778_g8qerj.png'
+    frame1: 'https://res.cloudinary.com/dre0vyh15/image/upload/v1737353892/vecteezy_social-media-beautiful-frame-design-with-red-love-and-blue_13473778_g8qerj.png', 
   });
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -54,6 +52,8 @@ function App() {
 
     const baseImage = new Image();
     const frameImage = new Image();
+    baseImage.crossOrigin = "anonymous";
+    frameImage.crossOrigin = "anonymous";
 
     baseImage.onload = () => {
       canvas.width = 500;
