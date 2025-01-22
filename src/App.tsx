@@ -92,17 +92,17 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-pink-50">
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12 relative">
           <h1 className="text-4xl font-bold text-green-800 mb-4">"Celebrating 175 Years of Fide et Labore"</h1>
           <p className="text-gray-600">Add frames to your profile picture for the celebration</p>
-          <button
+          {/* <button
             onClick={() => setIsAdminOpen(!isAdminOpen)}
-            className="absolute right-4 top-0 p-2 text-gray-600 hover:text-purple-600 transition-colors"
+            className="absolute right-4 top-0 p-2 text-gray-600 hover:text-green-600 transition-colors"
           >
             <Settings className="w-6 h-6" />
-          </button>
+          </button> */}
         </div>
 
         {isAdminOpen && (
@@ -127,7 +127,7 @@ function App() {
                   value={newFrameName}
                   onChange={(e) => setNewFrameName(e.target.value)}
                   placeholder="e.g., Summer Frame"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 />
               </div>
               
@@ -141,7 +141,7 @@ function App() {
                   ref={frameInputRef}
                   onChange={handleFrameUpload}
                   disabled={!newFrameName}
-                  className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100"
+                  className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100"
                 />
               </div>
             </div>
@@ -187,7 +187,7 @@ function App() {
                   />
                   <button
                     onClick={() => fileInputRef.current?.click()}
-                    className="flex items-center justify-center w-full py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                    className="flex items-center justify-center w-full py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                   >
                     <Upload className="w-5 h-5 mr-2" />
                     Choose Image
@@ -218,7 +218,7 @@ function App() {
                     key={key}
                     onClick={() => setFrame(key)}
                     className={`p-2 rounded-lg border-2 ${
-                      frame === key ? 'border-purple-500' : 'border-gray-200'
+                      frame === key ? 'border-green-500' : 'border-gray-200'
                     }`}
                   >
                     <img src={src} alt={key} className="w-full h-24 object-cover rounded" />
